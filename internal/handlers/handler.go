@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/alibekabdrakhman1/project/pkg/config"
-	"github.com/alibekabdrakhman1/project/pkg/models"
-	"github.com/alibekabdrakhman1/project/pkg/render"
+	"github.com/alibekabdrakhman1/project/internal/config"
+	"github.com/alibekabdrakhman1/project/internal/models"
+	"github.com/alibekabdrakhman1/project/internal/render"
 )
 
 var Repo *Repository

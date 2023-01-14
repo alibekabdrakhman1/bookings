@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/alibekabdrakhman1/project/pkg/config"
-	"github.com/alibekabdrakhman1/project/pkg/handlers"
-	"github.com/alibekabdrakhman1/project/pkg/render"
+	"github.com/alibekabdrakhman1/project/internal/config"
+	"github.com/alibekabdrakhman1/project/internal/handlers"
+	"github.com/alibekabdrakhman1/project/internal/render"
 )
 
 const portNumber = ":8080"

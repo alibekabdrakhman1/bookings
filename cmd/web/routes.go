@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"github.com/alibekabdrakhman1/project/pkg/config"
-	"github.com/alibekabdrakhman1/project/pkg/handlers"
+	"github.com/alibekabdrakhman1/project/internal/config"
+	"github.com/alibekabdrakhman1/project/internal/handlers"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/v5/middleware"
 )
