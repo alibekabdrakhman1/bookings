@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/alibekabdrakhman1/project/internal/config"
+	"github.com/alibekabdrakhman1/project/internal/forms"
 	"github.com/alibekabdrakhman1/project/internal/models"
 	"github.com/alibekabdrakhman1/project/internal/render"
 )
@@ -44,7 +45,12 @@ func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "contact.page.tmpl", &models.TemplateData{})
 }
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+		Form: forms.New(nil),
+	})
+}
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
+	
 }
 func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "search-availability.page.tmpl", &models.TemplateData{})
