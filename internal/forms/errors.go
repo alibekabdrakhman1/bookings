@@ -1,8 +1,5 @@
 package forms
 
-import "fmt"
-
-
 type errors map[string][]string
 
 func (e errors) Add(field, message string) {
@@ -16,4 +13,3 @@ func (e errors) Get(field string) string {
 	}
 	return es[0]
 }
-
