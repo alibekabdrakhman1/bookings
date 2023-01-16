@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/alibekabdrakhman1/project/internal/config"
@@ -45,12 +46,43 @@ func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "contact.page.tmpl", &models.TemplateData{})
 }
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
+	var emptyReservation models.Reservation
+	data := make(map[string]interface{})
+	data["reservation"] = emptyReservation 
 	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
 		Form: forms.New(nil),
+		Data: data,
 	})
 }
 func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
-	
+	err := r.ParseForm()
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	reservation := models.Reservation{
+		FirstName: r.Form.Get("first_name"),
+		LastName:  r.Form.Get("last_name"),
+		Email:     r.Form.Get("email"),
+		Phone:     r.Form.Get("phone"),
+	}
+	form := forms.New(r.PostForm)
+
+	form.Required("first_name", "last_name", "email")
+	form.MinLength("first_name", 3, r)
+
+	if !form.Valid() {
+		data := make(map[string]interface{})
+		data["reservation"] = reservation
+
+		render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+			Form: form,
+			Data: data,
+		})
+		return
+
+	}
+
 }
 func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "search-availability.page.tmpl", &models.TemplateData{})
@@ -67,8 +99,8 @@ type jsonResponse struct {
 }
 
 func (m *Repository) AvailabilityJson(w http.ResponseWriter, r *http.Request) {
-	resp := jsonResponse {
-		OK: true,
+	resp := jsonResponse{
+		OK:      true,
 		Message: "Available!",
 	}
 
