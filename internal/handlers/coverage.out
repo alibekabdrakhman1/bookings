@@ -1,0 +1,22 @@
+mode: set
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:21.47,25.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:27.33,29.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:31.67,33.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:35.68,37.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:39.71,41.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:42.69,44.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:45.70,47.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:48.74,56.2 4 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:57.78,59.16 2 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:63.2,74.19 6 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:85.2,86.66 2 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:59.16,62.3 2 0
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:74.19,84.3 4 0
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:89.75,91.2 1 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:92.79,96.2 3 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:103.79,110.16 3 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:113.2,114.14 2 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:110.16,112.3 1 0
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:118.81,120.9 2 1
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:127.2,132.5 4 0
+github.com/alibekabdrakhman1/project/internal/handlers/handler.go:120.9,125.3 4 1
